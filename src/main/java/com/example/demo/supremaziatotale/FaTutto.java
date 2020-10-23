@@ -38,7 +38,7 @@ public class FaTutto {
             String corpo = body.readLine();
             FileWriter myWriter = new FileWriter("src/main/resources/json.txt");
             while(nome!=null && corpo!=null) {
-                corpo = corpo.replace(" ","\"nome\":\""+nome+"\",");
+                corpo = corpo.replace("\"result\":{","\"result\":{\"nome\":\""+nome+"\",");
                 myWriter.append(corpo);
                 myWriter.append("\n");
                 System.out.println(corpo);
