@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class FaTutto {
+public class Service {
 
     public List<PlanList> esegui () throws IOException, JSONException {
         BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/json.txt"));
-        List<PlanList> odioViscomi = new ArrayList<PlanList>();
+        List<PlanList> planList = new ArrayList<PlanList>();
         String line = reader.readLine();
         while(line!=null) {
             PlanList odioTotale = new PlanList();
@@ -24,10 +24,10 @@ public class FaTutto {
             odioTotale.setPaymentDueDate(new Date(data.getLong("paymentDueDate")));
             odioTotale.setPaymentDuePrice(data.getDouble("paymentDuePrice"));
 
-            odioViscomi.add(odioTotale);
+            planList.add(odioTotale);
             line = reader.readLine();
         }
-        return odioViscomi;
+        return planList;
     }
 
     public void crea() throws FileNotFoundException {

@@ -12,7 +12,7 @@ import java.util.List;
 public class Controller implements WebMvcConfigurer {
     @RequestMapping("/")
     public List<PlanList> home() throws IOException, JSONException {
-        FaTutto tutto = new FaTutto();
+        Service tutto = new Service();
         tutto.crea();
         return tutto.esegui();
     }
