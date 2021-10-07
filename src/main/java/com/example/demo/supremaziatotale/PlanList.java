@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class PlanList {
 
-    //prova commit 3
+    //prova commit 4
     private String nome;
     private boolean trial;
     private String subscriptionCyclicity;
